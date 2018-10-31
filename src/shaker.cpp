@@ -496,7 +496,7 @@ int main(int argc, char** argv)
 		{
 			std::cout << "Framerate: " << (1000.0 / sdl_time_elapsed) << std::endl;
 		}
-
+		
 		#endif
 
 		if (sdl_time_elapsed < 1000.0 / 60.0)
