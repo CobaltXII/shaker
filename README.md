@@ -109,8 +109,6 @@ There you have it, scrolling rainbow colors. We have not even scratched the surf
 
 Shaker requires a machine that supports a minimum of OpenGL 3.2 Core. This is basically almost every machine. I chose to use OpenGL 3.2 Core for reasons specific to my machine.
 
-Shaker provides 4 input/output variables to every call to a GLSL fragment shader. The variable `out vec4 glx_FragColor` is the color of the current fragment, in RGBA format. The variable `in vec4 glx_FragCoord` is the 4-dimensional position of the current fragment. The variable `in vec2 glx_Resolution` is the size of the OpenGL drawable. The variable `in float glx_Time` is the time in seconds since Shaker started running.
-
 ## License
 
 Shaker is licensed under the GNU GPLv3. SDL2 is licensed under the zlib license.
