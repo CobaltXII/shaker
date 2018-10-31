@@ -203,7 +203,7 @@ void main()
 		4.0f * sin(glx_Time)
 	);
 
-	vec3 light_3_col = vec3(0.2f, 0.8f, 0.1f) * abs(sin(glx_Time * 1.2f)) * 4.0f;
+	vec3 light_3_col = vec3(0.2f, 0.8f, 0.1f) * abs(sin(glx_Time * 1.4f)) * 4.0f;
 
 	color += phong_illumination
 	(
