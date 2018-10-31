@@ -254,9 +254,9 @@ int main(int argc, char** argv)
 
 	if (!gl_success)
 	{
-		char gl_info[512];
+		char gl_info[4096];
 
-		glGetShaderInfoLog(gl_vertex_shader, 512, NULL, gl_info);
+		glGetShaderInfoLog(gl_vertex_shader, 4096, NULL, gl_info);
 
 		std::cout << "Could not compile vertex shader." << std::endl;
 
@@ -279,9 +279,9 @@ int main(int argc, char** argv)
 
 	if (!gl_success)
 	{
-		char gl_info[512];
+		char gl_info[4096];
 
-		glGetShaderInfoLog(gl_fragment_shader, 512, NULL, gl_info);
+		glGetShaderInfoLog(gl_fragment_shader, 4096, NULL, gl_info);
 
 		std::cout << "Could not compile fragment shader." << std::endl;
 
@@ -308,9 +308,9 @@ int main(int argc, char** argv)
 
 	if (!gl_success)
 	{
-		char gl_info[512];
+		char gl_info[4096];
 
-		glGetProgramInfoLog(gl_shader_program, 512, NULL, gl_info);
+		glGetProgramInfoLog(gl_shader_program, 4096, NULL, gl_info);
 
 		std::cout << "Could not link vertex and fragment shaders." << std::endl;
 
