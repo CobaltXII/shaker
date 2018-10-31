@@ -55,7 +55,15 @@ Shaker provides the variable `glx_FragCoord`, so we can use that to color our sc
 ```c
 void main()
 {
-	glx_FragColor = vec4(glx_FragCoord.x / glx_Resolution.x, glx_FragCoord.y / glx_Resolution.y, 0.0f, 1.0f);
+	glx_FragColor = vec4
+	(
+		glx_FragCoord.x / glx_Resolution.x, 
+		glx_FragCoord.y / glx_Resolution.y, 
+
+		0.0f, 
+
+		1.0f
+	);
 }
 ```
 
