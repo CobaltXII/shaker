@@ -216,7 +216,7 @@ void main()
 
 	vec3 eye = vec3(0.0f, 0.0f, 0.0f);
 
-	float dist = shortest_distance(eye, dir, 0.0f, 128.0f);
+	float dist = shortest_distance(eye, dir, 0.0f, 32.0f);
 
 	if (dist > 128.0f - epsilon)
 	{
