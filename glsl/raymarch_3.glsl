@@ -204,6 +204,14 @@ vec3 phong_illumination(vec2 p_i, vec3 k_d, vec3 k_s, vec3 k_l, vec3 k_i, float 
 
 void main()
 {
+	// Generate rotation matrices.
+
+	rm_x = rotate_x(glx_Time);
+	rm_y = rotate_y(glx_Time);
+	rm_z = rotate_z(glx_Time);
+
+	// Calculate ray direction and collision data. 
+
 	vec3 dir = ray_direction(45.0f, glx_Resolution, glx_FragCoord.xy);
 
 	vec3 eye = vec3(0.0f, 0.0f, 5.0f);
