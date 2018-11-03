@@ -243,7 +243,7 @@ void main()
 	(
 		4.0f * sin(glx_Time), 
 
-		2.0f, 
+		0.0f, 
 
 		4.0f * cos(glx_Time)
 	);
@@ -269,9 +269,9 @@ void main()
 	(
 		4.0f * cos(glx_Time), 
 
-		2.0f * sin(glx_Time), 
+		4.0f * sin(glx_Time), 
 
-		4.0f * sin(glx_Time)
+		0.0f
 	);
 
 	vec3 light_2_col = vec3(0.8f, 0.2f, 0.1f) * abs(sin(glx_Time * 1.2f)) * 4.0f;
@@ -293,7 +293,7 @@ void main()
 
 	vec3 light_3_pos = vec3
 	(
-		4.0f * sin(glx_Time), 
+		0.0f, 
 
 		4.0f * cos(glx_Time), 
 
