@@ -214,7 +214,7 @@ void main()
 
 	vec3 dir = ray_direction(45.0f, glx_Resolution, glx_FragCoord.xy);
 
-	vec3 eye = vec3(0.0f, 0.0f, 5.0f);
+	vec3 eye = vec3(0.0f, 0.0f, 0.0f);
 
 	float dist = shortest_distance(eye, dir, 0.0f, 128.0f);
 
