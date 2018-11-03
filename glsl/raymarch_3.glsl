@@ -55,6 +55,23 @@ mat3 rotate_x(float theta)
         vec3(0.0f, s, c)
     );
 }
+
+// Rotation matrix around the Y axis.
+
+mat3 rotate_y(float theta) 
+{
+    float c = cos(theta);
+    float s = sin(theta);
+
+    return mat3
+    (
+        vec3(c, 0.0f, s),
+
+        vec3(0.0f, 1.0f, 0.0f),
+        
+        vec3(-s, 0.0f, c)
+    );
+}
 // Signed distance function for the scene.
 
 float sdf_scene(vec3 position)
