@@ -1,3 +1,9 @@
+// Rotation matrices.
+
+mat3 rm_x;
+mat3 rm_y;
+mat3 rm_z;
+
 // Epsilon constant.
 
 float epsilon = 1e-5f;
