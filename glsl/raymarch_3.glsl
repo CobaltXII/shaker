@@ -231,8 +231,12 @@ void main()
 
 	vec3 pos = eye + dist * dir;
 
-	vec3 k_a = vec3(0.1f, 0.1f, 0.1f);
-	vec3 k_d = vec3(0.2f, 0.2f, 0.7f);
+	vec3 nrm = estimate_normal(pos);
+
+	vec3 k_a = nrm * 0.1f;
+
+	vec3 k_d = nrm;
+
 	vec3 k_s = vec3(1.0f, 1.0f, 1.0f);
 
 	float k_r = 16.0f;
