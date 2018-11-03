@@ -100,6 +100,8 @@ mat3 rotate_z(float theta)
 
 float sdf_scene(vec3 position)
 {
+	position = rm_x * rm_y * rm_z * position;
+
 	return op_intersection(sdf_box(position, vec3(0.5f, 0.5f, 0.5f)), sdf_sphere(position, 0.6f));
 }
 
