@@ -72,6 +72,24 @@ mat3 rotate_y(float theta)
         vec3(-s, 0.0f, c)
     );
 }
+
+// Rotation matrix around the Z axis.
+
+mat3 rotate_z(float theta) 
+{
+    float c = cos(theta);
+    float s = sin(theta);
+
+    return mat3
+    (
+        vec3(c, -s, 0.0f),
+
+        vec3(s, c, 0.0f),
+        
+        vec3(0.0f, 0.0f, 1.0f)
+    );
+}
+
 // Signed distance function for the scene.
 
 float sdf_scene(vec3 position)
