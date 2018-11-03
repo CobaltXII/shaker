@@ -24,6 +24,13 @@ float op_union(float d1, float d2)
 {  
 	return min(d1, d2); 
 }
+
+// Difference operator.
+
+float op_difference(float d1, float d2) 
+{ 
+	return max(-d1, d2); 
+}
 // Signed distance function for the scene.
 
 float sdf_scene(vec3 position)
