@@ -206,9 +206,9 @@ void main()
 {
 	// Generate rotation matrices.
 
-	rm_x = rotate_x(glx_Time);
-	rm_y = rotate_y(glx_Time);
-	rm_z = rotate_z(glx_Time);
+	rm_x = rotate_x(glx_Time / 5.0f);
+	rm_y = rotate_y(glx_Time / 5.0f);
+	rm_z = rotate_z(glx_Time / 5.0f);
 
 	// Calculate ray direction and collision data. 
 
