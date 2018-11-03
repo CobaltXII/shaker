@@ -39,6 +39,22 @@ float op_intersection(float d1, float d2)
 	return max(d1, d2); 
 }
 
+// Rotation matrix around the X axis.
+
+mat3 rotate_x(float theta) 
+{
+    float c = cos(theta);
+    float s = sin(theta);
+
+    return mat3
+    (
+        vec3(1.0f, 0.0f, 0.0f),
+
+        vec3(0.0f, c, -s),
+
+        vec3(0.0f, s, c)
+    );
+}
 // Signed distance function for the scene.
 
 float sdf_scene(vec3 position)
