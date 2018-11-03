@@ -6,7 +6,7 @@ mat3 rm_z;
 
 // Epsilon constant.
 
-float epsilon = 1e-5f;
+float epsilon = 1e-3f;
 
 // Signed distance function for a box.
 
