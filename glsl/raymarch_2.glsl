@@ -4,16 +4,16 @@ float epsilon = 1e-5f;
 
 // Signed distance function for a sphere.
 
-float sdf_sphere(vec3 position)
+float sdf_sphere(vec3 position, float radius)
 {
-	return length(position) - 1.0f;
+	return length(position) - radius;
 }
 
 // Signed distance function for the scene.
 
 float sdf_scene(vec3 position)
 {
-	return sdf_sphere(position);
+	return sdf_sphere(position, 1.0f);
 }
 
 // Return the shortest distance from the camera to the scene within the bounds
