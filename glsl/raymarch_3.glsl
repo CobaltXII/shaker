@@ -43,7 +43,7 @@ float op_intersection(float d1, float d2)
 
 float sdf_scene(vec3 position)
 {
-	return sdf_sphere(position, 1.0f);
+	return op_intersection(sdf_box(position, vec3(0.5f, 0.5f, 0.5f)), sdf_sphere(position, 0.6f));
 }
 
 // Return the shortest distance from the camera to the scene within the bounds
