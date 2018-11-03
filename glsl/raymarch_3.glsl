@@ -102,7 +102,11 @@ float sdf_scene(vec3 position)
 {
 	position = rm_x * rm_y * rm_z * position;
 
-	return op_intersection(sdf_box(position, vec3(0.5f, 0.5f, 0.5f)), sdf_sphere(position, 0.6f));
+	float domain = 3.0f;
+
+	position = mod(position, vec3(domain, domain, domain)) - 0.5 * vec3(domain, domain, domain);
+
+	return op_intersection(sdf_box(position, vec3(0.5f, 0.5f, 0.5f)), sdf_sphere(position, 0.6f + abs(sin(glx_Time)) * 0.1f));
 }
 
 // Return the shortest distance from the camera to the scene within the bounds
