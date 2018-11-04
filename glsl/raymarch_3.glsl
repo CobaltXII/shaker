@@ -317,6 +317,7 @@ void main()
 	);
 
 	light_3_pos += eye;
+
 	vec3 light_3_col = vec3(1.0f, 1.0f, 1.0f) * 1.0f;
 
 	color += phong_illumination
