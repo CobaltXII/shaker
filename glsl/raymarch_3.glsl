@@ -151,6 +151,8 @@ vec3 ray_direction(float field_of_view, vec2 size, vec2 coords)
 
 vec3 estimate_normal(vec3 position)
 {
+	#define epsilon 1e-2
+
 	return normalize
 	(
 		vec3
