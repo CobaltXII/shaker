@@ -167,6 +167,8 @@ vec3 estimate_normal(vec3 position)
 			sdf_scene(vec3(position.x, position.y, position.z - epsilon))
 		)
 	);
+
+	#undef epsilon
 }
 
 // Calculate the illumination of a point.
