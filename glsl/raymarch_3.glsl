@@ -288,6 +288,8 @@ void main()
 		0.0f
 	);
 
+	light_2_pos += eye;
+
 	vec3 light_2_col = vec3(1.0f, 1.0f, 1.0f) * 1.0f;
 
 	color += phong_illumination
@@ -314,6 +316,7 @@ void main()
 		4.0f * sin(glx_Time)
 	);
 
+	light_3_pos += eye;
 	vec3 light_3_col = vec3(1.0f, 1.0f, 1.0f) * 1.0f;
 
 	color += phong_illumination
