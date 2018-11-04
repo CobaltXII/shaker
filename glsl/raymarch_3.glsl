@@ -333,5 +333,5 @@ void main()
 		k_r
 	);
 
-	glx_FragColor = vec4(color + vec3(1.0f, 1.0f, 1.0f) * (dist / 40.0f), 1.0f);
+	glx_FragColor = vec4(color - vec3(1.0f, 1.0f, 1.0f) * (dist / 30.0f), 1.0f);
 }
