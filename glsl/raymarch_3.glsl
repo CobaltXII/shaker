@@ -260,6 +260,8 @@ void main()
 		4.0f * cos(glx_Time)
 	);
 
+	light_1_pos += eye;
+
 	vec3 light_1_col = vec3(1.0f, 1.0f, 1.0f) * 1.0f;
 
 	color += phong_illumination
