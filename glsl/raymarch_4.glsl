@@ -12,6 +12,18 @@ mat4 bayer = mat4
 
 ) * 1.0f / 16.0f;
 
+mat4 cluster = mat4
+(
+	vec4(12.0f, 5.0f, 6.0f, 13.0f),
+
+	vec4(4.0f, 0.0f, 1.0f, 7.0f),
+
+	vec4(11.0f, 3.0f, 2.0f, 8.0f),
+
+	vec4(15.0f, 10.0f, 9.0f, 14.0f)
+
+) * 1.0f / 16.0f;
+
 // Rotation matrices.
 
 mat3 rm_x;
@@ -347,9 +359,11 @@ void main()
 		k_r
 	);
 
-	glx_FragColor = vec4(color + vec3(1.0f, 1.0f, 1.0f) * (dist / 30.0f), 1.0f);
+	glx_FragColor = vec4(color - vec3(1.0f, 1.0f, 1.0f) * (dist / 30.0f), 1.0f);
 
-	if (glx_FragColor.x < bayer[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
+	#define d_matrix cluster
+
+	if (glx_FragColor.x < d_matrix[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
 	{
 		glx_FragColor.x = 0.0f;
 	}
@@ -358,7 +372,7 @@ void main()
 		glx_FragColor.x = 1.0f;
 	}
 
-	if (glx_FragColor.y < bayer[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
+	if (glx_FragColor.y < d_matrix[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
 	{
 		glx_FragColor.y = 0.0f;
 	}
@@ -367,7 +381,7 @@ void main()
 		glx_FragColor.y = 1.0f;
 	}
 
-	if (glx_FragColor.z < bayer[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
+	if (glx_FragColor.z < d_matrix[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
 	{
 		glx_FragColor.z = 0.0f;
 	}
