@@ -1,3 +1,17 @@
+// Dither matrix.
+
+mat4 bayer = mat4
+(
+	vec4(0.0f, 8.0f, 2.0f, 10.0f),
+
+	vec4(12.0f, 4.0f, 14.0f, 6.0f),
+
+	vec4(3.0f, 11.0f, 1.0f, 9.0f),
+
+	vec4(15.0f, 7.0f, 13.0f, 5.0f)
+
+) * 1.0f / 16.0f;
+
 // Epsilon constant.
 
 float epsilon = 1e-5f;
@@ -218,5 +232,38 @@ void main()
 		k_r
 	);
 
-	glx_FragColor = vec4(color, 1.0f);
+	float gamma = 2.2f;
+
+	glx_FragColor = vec4(pow(color, vec3(gamma, gamma, gamma)), 1.0f);
+
+	return;
+
+	#define d_matrix bayer
+
+	if (glx_FragColor.x < d_matrix[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
+	{
+		glx_FragColor.x = 0.0f;
+	}
+	else
+	{
+		glx_FragColor.x = 1.0f;
+	}
+
+	if (glx_FragColor.y < d_matrix[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
+	{
+		glx_FragColor.y = 0.0f;
+	}
+	else
+	{
+		glx_FragColor.y = 1.0f;
+	}
+
+	if (glx_FragColor.z < d_matrix[int(mod(glx_FragCoord.x, 4.0f))][int(mod(glx_FragCoord.y, 4.0f))])
+	{
+		glx_FragColor.z = 0.0f;
+	}
+	else
+	{
+		glx_FragColor.z = 1.0f;
+	}
 }
