@@ -42,7 +42,7 @@ float fbm(vec2 seed)
 
 void main() 
 {
-    vec2 seed = glx_FragCoord.xy / glx_Resolution.yy * 18.0f;
+    vec2 seed = glx_FragCoord.xy / glx_Resolution.yy * 3.0f;
 
     vec3 color = vec3(0.0f);
 
