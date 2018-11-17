@@ -2,6 +2,8 @@
 
 Shaker is a GLSL sandbox for the desktop.
 
+![Fractal Brownian motion simulation](https://raw.githubusercontent.com/CobaltXII/shaker/master/img/ss_brownian_1.png)
+
 ## Building
 
 You need to link OpenGL and SDL2 in order to build Shaker. The following command should suffice for most systems and compilers.
