@@ -113,4 +113,4 @@ Shaker requires a machine that supports a minimum of OpenGL 3.2 Core. This is ba
 
 ## License
 
-Shaker is licensed under the GNU GPLv3. SDL2 is licensed under the zlib license.
+Shaker is licensed under the MIT License.
