@@ -125,7 +125,9 @@ Building shaker :
 
 pre-requisites : libGL , libGLEW and SDL + headers MUST be installed
 
-in the root dir, simply type make
+cd shaker  # cd the root dir, containing everything
+
+Once in the root dir, simply type make
 
 If nothing goes wrong, two binaries are built in build subdir.
 To test fastly, just type : 
