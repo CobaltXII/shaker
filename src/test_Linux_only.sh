@@ -25,8 +25,8 @@ APPLICATION=./shaker${DEBUG_EXT}
 # the idea is to launch shaker with the right options
 # as you can see, you can customize the list !
 
-liste="fragment.glsl
-        ${shaders_dir}/brownian.glsl
+liste="fragment.glsl \
+        ${shaders_dir}/brownian.glsl \
         ${shaders_dir}/raymarch_1.glsl \
         ${shaders_dir}/raymarch_2.glsl \
         ${shaders_dir}/raymarch_3.glsl \
