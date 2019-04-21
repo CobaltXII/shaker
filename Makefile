@@ -17,8 +17,8 @@ CXX = g++${VERSION}
 CXX_STANDARD = -std=c++11
 
 # often src, or something close
-SOURCES_DIR = .
-BUILD_DIR = .
+SOURCES_DIR = src
+BUILD_DIR = build
 
 APPLICATION_NAME = shaker
 FILENAME = ${BUILD_DIR}/${APPLICATION_NAME}

@@ -5,7 +5,9 @@
 # this shell script is under GPL v2+ License
 
 # adapt to your path
-shaders_dir=../glsl
+shaders_dir=./glsl
+src_dir=./src
+build_dir=./build
 # change the value if you want another delay between the slideshow
 delay=5
 
@@ -19,13 +21,13 @@ delay=5
 
 
 #
-APPLICATION=./shaker${DEBUG_EXT}
+APPLICATION=${build_dir}/shaker${DEBUG_EXT}
 
 
 # the idea is to launch shaker with the right options
 # as you can see, you can customize the list !
 
-liste="fragment.glsl \
+liste="${src_dir}/fragment.glsl \
         ${shaders_dir}/brownian.glsl \
         ${shaders_dir}/raymarch_1.glsl \
         ${shaders_dir}/raymarch_2.glsl \
