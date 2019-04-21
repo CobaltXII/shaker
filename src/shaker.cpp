@@ -75,8 +75,8 @@ perfectly, Apple has just dropped support for updating it.
 
 #else
 /*  Windows or maybe Mac OS X*/
-#define GL_MAJOR_VERSION  3
-#define GL_MINOR_VERSION  2
+#define MY_GL_MAJOR_VERSION  3
+#define MY_GL_MINOR_VERSION  2
 #include <OpenGL/GL3.h>
 #endif
 
