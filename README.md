@@ -1,3 +1,5 @@
+
+
 # Shaker
 
 Shaker is a GLSL sandbox for the desktop.
@@ -114,3 +116,26 @@ Shaker requires a machine that supports a minimum of OpenGL 3.2 Core. This is ba
 ## License
 
 Shaker is licensed under the MIT License.
+
+
+
+Linux only // ericb  2019 04 21
+
+Building shaker :
+
+pre-requisites : libGL , libGLEW and SDL + headers MUST be installed
+
+in the root dir, simply type make
+
+If nothing goes wrong, two binaries are built in build subdir.
+To test fastly, just type : 
+./test_Linux_only.sh
+
+If something does not work, try to change MY_GL_MAJOR_VERSION for 3 and MY_GL_MINOR_VERSION for 2 (currently 4 and 5 respectively)
+
+type :
+make clean && make
+then retry :
+./test_Linux_only.sh
+
+If still not working, check twice all dependencies are ok, and if so, file an issue.
