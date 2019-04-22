@@ -2,19 +2,26 @@
 
 Shaker is a GLSL sandbox for the desktop.
 
+Linux : 
+
+There is a Makefile in the root dir. Just type :  make
+If something goes wrong, please have a look in the README file, located in the parent of the current directory.
+
+If nothing wrong occurs, you can test all provided fragment shaders using a the test_linux.sh script. 
+
+Note : maybe you'll have to chmod ug+X it, in order to execute it (not sure the exec attribute will be kept by git though ...)
+
+OTher unixes and Apple
+
 You need to link OpenGL and SDL2 in order to build Shaker. The following command should suffice 
 for most systems and compilers.
 
 	clang++ shaker.cpp -o shaker -O3 -lSDL2 -lGL
 
-On Apple systems, you may need to use this command instead, based on your compiler vendor.
+e.g. on Apple systems, you may need to use this command instead, based on your compiler vendor.
 
 	clang++ shaker.cpp -o shaker -O3 -lSDL2 -framework OpenGL
 
-Linux : 
-
-There is a Makefile in the root dir. Just type :  make
-If something goes wrong, please have a look in the README file, located in the parent of the current directory.
 
 Once you have compiled Shaker successfully, it is trivial to use it. Simply pass a filename as an
 argument to Shaker. You can optionally pass a width and a height (you must specify both if you are
@@ -29,7 +36,7 @@ or, this is also valid
 Shaker requires a machine that supports a minimum of OpenGL 3.2 Core. This is basically almost 
 every machine. I chose to use OpenGL 3.2 Core for reasons specific to my machine.
 
-Shaker is licensed under the GNU GPLv3. SDL2 is licensed under the zlib license.
+//Shaker is licensed under the MIT license (see License fie in the root dir). SDL2 is licensed under the zlib license.
 
 */
 
