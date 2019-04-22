@@ -11,8 +11,9 @@ On Apple systems, you may need to use this command instead, based on your compil
 
 	clang++ shaker.cpp -o shaker -O3 -lSDL2 -framework OpenGL
 
-Linux : there is a Makefile in the root dir. Just type :  make
+Linux : 
 
+There is a Makefile in the root dir. Just type :  make
 If something goes wrong, please have a look in the README file, located in the parent of the current directory.
 
 Once you have compiled Shaker successfully, it is trivial to use it. Simply pass a filename as an
