@@ -23,11 +23,15 @@ clang++ shaker.cpp -o shaker -O3 -lSDL2 -framework OpenGL
 
 # **Linux** (new) // ericb  2019 04 21
 
+Tools : gcc (5.4.x and superior should be ok), GNU Make, and essential-build installed. If not sufficient, please file an issue.
+
+pre-requisites : libGL , libGLEW and SDL2  (not SDL 1.2.x !) + matching headers MUST be installed
+
 I provided a Makefile (located in the root dir), and if all dependencies are satisfied, the build is very fast.
+
 
 Building shaker :
 
-pre-requisites : libGL , libGLEW and SDL + headers MUST be installed
 
 cd shaker  # cd the root dir, containing everything
 
