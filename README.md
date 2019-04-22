@@ -21,7 +21,7 @@ On Apple systems, you may need to use this command instead, based on your compil
 clang++ shaker.cpp -o shaker -O3 -lSDL2 -framework OpenGL
 ```
 
-# **Linux** (new) // ericb  2019 04 21
+# Linux (new) // ericb  2019 04 21
 
 Tools : gcc (5.4.x and superior should be ok), GNU Make, and essential-build installed. If not sufficient, please file an issue.
 
