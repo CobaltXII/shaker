@@ -46,7 +46,7 @@ Shaker is licensed under the GNU GPLv3. SDL2 is licensed under the zlib license.
    else 0  (unlimited fps)
 */
 
-#define SHAKER_VSINC 0
+#define SHAKER_VSYNC 0
 
 #define DEFAULT_WIDTH  1280
 #define DEFAULT_HEIGHT  720
@@ -247,7 +247,7 @@ int main(int argc, char** argv)
         std::cout << "OpenGL version: " << glGetString(GL_VERSION) << "." << std::endl;
         std::cout << "OpenGL drawable size: " << gl_w << ", " << gl_h << "." << std::endl;
 #endif
-        SDL_GL_SetSwapInterval(SHAKER_VSINC);
+        SDL_GL_SetSwapInterval(SHAKER_VSYNC);
         /*
                 Load and compile shaders.
         */
