@@ -11,9 +11,9 @@ On Apple systems, you may need to use this command instead, based on your compil
 
 	clang++ shaker.cpp -o shaker -O3 -lSDL2 -framework OpenGL
 
-I don't use GNU/Linux or Windows, so I wouldn't know where to find the OpenGL or SDL include 
-files. You'll probably have to modify the include paths. Other than that, Shaker is (probably) 
-cross-compatible.
+Linux : there is a Makefile in the root dir. Just type :  make
+
+If something goes wrong, please have a look in the README file, located in the parent of the current directory.
 
 Once you have compiled Shaker successfully, it is trivial to use it. Simply pass a filename as an
 argument to Shaker. You can optionally pass a width and a height (you must specify both if you are
