@@ -36,7 +36,10 @@ or, this is also valid
 Shaker requires a machine that supports a minimum of OpenGL 3.2 Core. This is basically almost 
 every machine. I chose to use OpenGL 3.2 Core for reasons specific to my machine.
 
-//Shaker is licensed under the MIT license (see License fie in the root dir). SDL2 is licensed under the zlib license.
+In fact, it is possible to run OpenGL > 3.0 on Linux too. For further information, have a look at :
+https://github.com/ebachard/imgui-mix-sdl2/commit/cd9c5fd9450fab155ebd4b4b97be777a587e0c09
+
+Shaker is licensed under the MIT license (see License file in thet root dir). SDL2 is licensed under the zlib license.
 
 */
 
