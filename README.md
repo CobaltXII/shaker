@@ -1,3 +1,5 @@
+
+
 # Shaker
 
 Shaker is a GLSL sandbox for the desktop.
@@ -12,13 +14,42 @@ You need to link OpenGL and SDL2 in order to build Shaker. The following command
 clang++ shaker.cpp -o shaker -O3 -lSDL2 -lGL
 ```
 
+## Apple 
 On Apple systems, you may need to use this command instead, based on your compiler vendor.
 
 ```bash
 clang++ shaker.cpp -o shaker -O3 -lSDL2 -framework OpenGL
 ```
 
-I don't use GNU/Linux or Windows, so I wouldn't know where to find the OpenGL or SDL include files. You'll probably have to modify the include paths. Other than that, Shaker is (probably) cross-compatible.
+# Linux (new) // ericb  2019 04 21
+
+Tools : gcc (5.4.x and superior should be ok), GNU Make, and essential-build installed. If not sufficient, please file an issue.
+
+pre-requisites : libGL , libGLEW and SDL2  (not SDL 1.2.x !) + matching headers MUST be installed
+
+I provided a Makefile (located in the root dir), and if all dependencies are satisfied, the build is very fast.
+
+
+Building shaker :
+
+
+cd shaker  # cd the root dir, containing everything
+
+Once in the root dir, simply type make
+
+If nothing goes wrong, two binaries are built in build subdir.
+To test fastly, just type : 
+./test_Linux_only.sh
+
+If something does not work, try to change MY_GL_MAJOR_VERSION for 3 and MY_GL_MINOR_VERSION for 2 (currently 4 and 5 respectively)
+
+type :
+make clean && make
+then retry :
+./test_Linux_only.sh
+
+If still not working, check twice all dependencies are ok, and if so, file an issue.
+
 
 ## Usage
 
@@ -114,3 +145,6 @@ Shaker requires a machine that supports a minimum of OpenGL 3.2 Core. This is ba
 ## License
 
 Shaker is licensed under the MIT License.
+
+
+
